@@ -1,2 +1,2 @@
-# RAG_Book-_QA_Project
-A GenAI-powered web app that lets users upload their own technical books (PDF, DOCX, TXT) and instantly ask questions, with answers generated and sourced using retrieval-augmented generation (RAG) and open-source LLMs
+# RAG_Book_QA_System
+RAG Book QA is an end-to-end, Retrieval-Augmented Generation (RAG) system engineered to provide instant, contextually grounded answers to user queries from uploaded data science and programming books. Leveraging advanced NLP pipelines, flexible chunking strategies, semantic and hybrid search, and open-source large language models (LLMs), the app demonstrates a modern AI assistant workflow suitable for real-world educational, research, or enterprise search applications.

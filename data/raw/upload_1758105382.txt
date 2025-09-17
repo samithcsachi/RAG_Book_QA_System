@@ -1,0 +1,24 @@
+For Beginners
+1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron
+ 
+2. "Python Machine Learning" by Sebastian Raschka and Vahid Mirjalili
+  
+3. "Machine Learning for Absolute Beginners" by Oliver Theobald
+
+   
+For Intermediate Learners
+1. "Pattern Recognition and Machine Learning" by Christopher M. Bishop
+
+2. "Machine Learning: A Probabilistic Perspective" by Kevin P. Murphy
+  
+3. "Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
+ 
+
+For Advanced Learners
+1. "The Elements of Statistical Learning" by Trevor Hastie, Robert Tibshirani, and Jerome Friedman
+  
+2. "Reinforcement Learning: An Introduction" by Richard S. Sutton and Andrew G. Barto
+  
+3. "Information Theory, Inference, and Learning Algorithms" by David J.C. MacKay
+  
+

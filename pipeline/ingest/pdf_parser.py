@@ -1,8 +1,10 @@
 import fitz  
 from pathlib import Path
+from .parser_base import ParserBase
+from typing import Tuple, Dict 
 
-class PDFParser:
-    def extract_text_and_metadata(self, filepath: str) -> (str, dict):
+class PDFParser(ParserBase):
+    def extract_text_and_metadata(self, filepath: str) -> Tuple[str, Dict]:
         
         doc = fitz.open(filepath)
         text = ""

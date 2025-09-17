@@ -1,0 +1,165 @@
+2025-09-17 13:49:13,837 - INFO - Created directory: .github\workflows for the file: ci.yml
+2025-09-17 13:49:13,838 - INFO - Created empty file: .github\workflows\ci.yml
+2025-09-17 13:49:13,838 - INFO - Created directory: app\api for the file: __init__.py
+2025-09-17 13:49:13,838 - INFO - Created empty file: app\api\__init__.py
+2025-09-17 13:49:13,839 - INFO - Created directory: app\api for the file: routes.py
+2025-09-17 13:49:13,839 - INFO - File already exists: app\api\routes.py and is not empty.
+2025-09-17 13:49:13,839 - INFO - Created directory: app\api for the file: schemas.py
+2025-09-17 13:49:13,840 - INFO - Created empty file: app\api\schemas.py
+2025-09-17 13:49:13,840 - INFO - Created directory: app\api for the file: session.py
+2025-09-17 13:49:13,842 - INFO - Created empty file: app\api\session.py
+2025-09-17 13:49:13,842 - INFO - Created directory: app for the file: gradio_app.py
+2025-09-17 13:49:13,842 - INFO - File already exists: app\gradio_app.py and is not empty.
+2025-09-17 13:49:13,843 - INFO - Created directory: app for the file: dashboard.py
+2025-09-17 13:49:13,843 - INFO - Created empty file: app\dashboard.py
+2025-09-17 13:49:13,843 - INFO - Created directory: app for the file: logger.py
+2025-09-17 13:49:13,844 - INFO - Created empty file: app\logger.py
+2025-09-17 13:49:13,844 - INFO - Created directory: pipeline for the file: __init__.py
+2025-09-17 13:49:13,845 - INFO - Created empty file: pipeline\__init__.py
+2025-09-17 13:49:13,845 - INFO - Created directory: pipeline\ingest for the file: __init__.py
+2025-09-17 13:49:13,846 - INFO - Created empty file: pipeline\ingest\__init__.py
+2025-09-17 13:49:13,846 - INFO - Created directory: pipeline\ingest for the file: parser_base.py
+2025-09-17 13:49:13,846 - INFO - Created empty file: pipeline\ingest\parser_base.py
+2025-09-17 13:49:13,847 - INFO - Created directory: pipeline\ingest for the file: pdf_parser.py
+2025-09-17 13:49:13,847 - INFO - File already exists: pipeline\ingest\pdf_parser.py and is not empty.
+2025-09-17 13:49:13,847 - INFO - Created directory: pipeline\ingest for the file: docx_parser.py
+2025-09-17 13:49:13,848 - INFO - Created empty file: pipeline\ingest\docx_parser.py
+2025-09-17 13:49:13,848 - INFO - Created directory: pipeline\ingest for the file: txt_parser.py
+2025-09-17 13:49:13,849 - INFO - Created empty file: pipeline\ingest\txt_parser.py
+2025-09-17 13:49:13,849 - INFO - Created directory: pipeline\ingest for the file: html_parser.py
+2025-09-17 13:49:13,849 - INFO - Created empty file: pipeline\ingest\html_parser.py
+2025-09-17 13:49:13,850 - INFO - Created directory: pipeline\preprocess for the file: __init__.py
+2025-09-17 13:49:13,850 - INFO - Created empty file: pipeline\preprocess\__init__.py
+2025-09-17 13:49:13,850 - INFO - Created directory: pipeline\preprocess for the file: clean_text.py
+2025-09-17 13:49:13,851 - INFO - Created empty file: pipeline\preprocess\clean_text.py
+2025-09-17 13:49:13,851 - INFO - Created directory: pipeline\preprocess for the file: metadata.py
+2025-09-17 13:49:13,852 - INFO - Created empty file: pipeline\preprocess\metadata.py
+2025-09-17 13:49:13,853 - INFO - Created directory: pipeline\chunking for the file: __init__.py
+2025-09-17 13:49:13,853 - INFO - Created empty file: pipeline\chunking\__init__.py
+2025-09-17 13:49:13,854 - INFO - Created directory: pipeline\chunking for the file: splitter_base.py
+2025-09-17 13:49:13,854 - INFO - Created empty file: pipeline\chunking\splitter_base.py
+2025-09-17 13:49:13,855 - INFO - Created directory: pipeline\chunking for the file: fixed_chunker.py
+2025-09-17 13:49:13,855 - INFO - Created empty file: pipeline\chunking\fixed_chunker.py
+2025-09-17 13:49:13,855 - INFO - Created directory: pipeline\chunking for the file: semantic_chunker.py
+2025-09-17 13:49:13,856 - INFO - Created empty file: pipeline\chunking\semantic_chunker.py
+2025-09-17 13:49:13,857 - INFO - Created directory: pipeline\chunking for the file: chunk_benchmark.py
+2025-09-17 13:49:13,858 - INFO - Created empty file: pipeline\chunking\chunk_benchmark.py
+2025-09-17 13:49:13,858 - INFO - Created directory: pipeline\eval_data for the file: __init__.py
+2025-09-17 13:49:13,859 - INFO - Created empty file: pipeline\eval_data\__init__.py
+2025-09-17 13:49:13,860 - INFO - Created directory: pipeline\eval_data for the file: qa_generator.py
+2025-09-17 13:49:13,860 - INFO - Created empty file: pipeline\eval_data\qa_generator.py
+2025-09-17 13:49:13,861 - INFO - Created directory: pipeline\embeddings for the file: __init__.py
+2025-09-17 13:49:13,862 - INFO - Created empty file: pipeline\embeddings\__init__.py
+2025-09-17 13:49:13,863 - INFO - Created directory: pipeline\embeddings for the file: embedder_base.py
+2025-09-17 13:49:13,864 - INFO - Created empty file: pipeline\embeddings\embedder_base.py
+2025-09-17 13:49:13,864 - INFO - Created directory: pipeline\embeddings for the file: sentence_transformer_embed.py
+2025-09-17 13:49:13,865 - INFO - Created empty file: pipeline\embeddings\sentence_transformer_embed.py
+2025-09-17 13:49:13,865 - INFO - Created directory: pipeline\embeddings for the file: cohere_embed.py
+2025-09-17 13:49:13,866 - INFO - Created empty file: pipeline\embeddings\cohere_embed.py
+2025-09-17 13:49:13,866 - INFO - Created directory: pipeline\embeddings for the file: voyageai_embed.py
+2025-09-17 13:49:13,867 - INFO - Created empty file: pipeline\embeddings\voyageai_embed.py
+2025-09-17 13:49:13,868 - INFO - Created directory: pipeline\embeddings for the file: embedding_registry.py
+2025-09-17 13:49:13,870 - INFO - Created empty file: pipeline\embeddings\embedding_registry.py
+2025-09-17 13:49:13,872 - INFO - Created directory: pipeline\embeddings for the file: compress.py
+2025-09-17 13:49:13,874 - INFO - Created empty file: pipeline\embeddings\compress.py
+2025-09-17 13:49:13,875 - INFO - Created directory: pipeline\vector_store for the file: __init__.py
+2025-09-17 13:49:13,875 - INFO - Created empty file: pipeline\vector_store\__init__.py
+2025-09-17 13:49:13,876 - INFO - Created directory: pipeline\vector_store for the file: store_base.py
+2025-09-17 13:49:13,877 - INFO - Created empty file: pipeline\vector_store\store_base.py
+2025-09-17 13:49:13,878 - INFO - Created directory: pipeline\vector_store for the file: faiss_store.py
+2025-09-17 13:49:13,878 - INFO - Created empty file: pipeline\vector_store\faiss_store.py
+2025-09-17 13:49:13,879 - INFO - Created directory: pipeline\vector_store for the file: weaviate_store.py
+2025-09-17 13:49:13,880 - INFO - Created empty file: pipeline\vector_store\weaviate_store.py
+2025-09-17 13:49:13,881 - INFO - Created directory: pipeline\vector_store for the file: bm25_keyword_store.py
+2025-09-17 13:49:13,881 - INFO - Created empty file: pipeline\vector_store\bm25_keyword_store.py
+2025-09-17 13:49:13,882 - INFO - Created directory: pipeline\vector_store for the file: store_registry.py
+2025-09-17 13:49:13,882 - INFO - Created empty file: pipeline\vector_store\store_registry.py
+2025-09-17 13:49:13,883 - INFO - Created directory: pipeline\vector_store for the file: hybrid_retriever.py
+2025-09-17 13:49:13,884 - INFO - Created empty file: pipeline\vector_store\hybrid_retriever.py
+2025-09-17 13:49:13,886 - INFO - Created directory: pipeline\rag for the file: __init__.py
+2025-09-17 13:49:13,887 - INFO - Created empty file: pipeline\rag\__init__.py
+2025-09-17 13:49:13,890 - INFO - Created directory: pipeline\rag for the file: retrieval_engine.py
+2025-09-17 13:49:13,891 - INFO - Created empty file: pipeline\rag\retrieval_engine.py
+2025-09-17 13:49:13,892 - INFO - Created directory: pipeline\rag for the file: prompt_templates.py
+2025-09-17 13:49:13,894 - INFO - Created empty file: pipeline\rag\prompt_templates.py
+2025-09-17 13:49:13,895 - INFO - Created directory: pipeline\rag for the file: reranker.py
+2025-09-17 13:49:13,895 - INFO - Created empty file: pipeline\rag\reranker.py
+2025-09-17 13:49:13,896 - INFO - Created directory: pipeline\rag for the file: metrics.py
+2025-09-17 13:49:13,897 - INFO - Created empty file: pipeline\rag\metrics.py
+2025-09-17 13:49:13,897 - INFO - Created directory: pipeline\rag for the file: citation.py
+2025-09-17 13:49:13,898 - INFO - Created empty file: pipeline\rag\citation.py
+2025-09-17 13:49:13,899 - INFO - Created directory: pipeline\monitoring for the file: __init__.py
+2025-09-17 13:49:13,899 - INFO - Created empty file: pipeline\monitoring\__init__.py
+2025-09-17 13:49:13,900 - INFO - Created directory: pipeline\monitoring for the file: drift_detection.py
+2025-09-17 13:49:13,901 - INFO - Created empty file: pipeline\monitoring\drift_detection.py
+2025-09-17 13:49:13,901 - INFO - Created directory: pipeline\monitoring for the file: feedback.py
+2025-09-17 13:49:13,902 - INFO - Created empty file: pipeline\monitoring\feedback.py
+2025-09-17 13:49:13,903 - INFO - Created directory: llm for the file: __init__.py
+2025-09-17 13:49:13,904 - INFO - Created empty file: llm\__init__.py
+2025-09-17 13:49:13,905 - INFO - Created directory: llm for the file: llm_base.py
+2025-09-17 13:49:13,907 - INFO - Created empty file: llm\llm_base.py
+2025-09-17 13:49:13,908 - INFO - Created directory: llm for the file: mistral_local.py
+2025-09-17 13:49:13,909 - INFO - Created empty file: llm\mistral_local.py
+2025-09-17 13:49:13,910 - INFO - Created directory: llm for the file: openai_api.py
+2025-09-17 13:49:13,911 - INFO - Created empty file: llm\openai_api.py
+2025-09-17 13:49:13,911 - INFO - Created directory: llm for the file: lora_adapter.py
+2025-09-17 13:49:13,912 - INFO - Created empty file: llm\lora_adapter.py
+2025-09-17 13:49:13,913 - INFO - Created directory: llm for the file: model_registry.py
+2025-09-17 13:49:13,913 - INFO - Created empty file: llm\model_registry.py
+2025-09-17 13:49:13,914 - INFO - Created directory: llm for the file: multilingual.py
+2025-09-17 13:49:13,914 - INFO - Created empty file: llm\multilingual.py
+2025-09-17 13:49:13,915 - INFO - Created directory: tests for the file: __init__.py
+2025-09-17 13:49:13,915 - INFO - Created empty file: tests\__init__.py
+2025-09-17 13:49:13,916 - INFO - Created directory: tests for the file: test_pdf_parser.py
+2025-09-17 13:49:13,916 - INFO - File already exists: tests\test_pdf_parser.py and is not empty.
+2025-09-17 13:49:13,917 - INFO - Created directory: tests for the file: test_docx_parser.py
+2025-09-17 13:49:13,918 - INFO - Created empty file: tests\test_docx_parser.py
+2025-09-17 13:49:13,919 - INFO - Created directory: tests for the file: test_txt_parser.py
+2025-09-17 13:49:13,921 - INFO - Created empty file: tests\test_txt_parser.py
+2025-09-17 13:49:13,922 - INFO - Created directory: tests for the file: test_html_parser.py
+2025-09-17 13:49:13,923 - INFO - Created empty file: tests\test_html_parser.py
+2025-09-17 13:49:13,924 - INFO - Created directory: tests for the file: test_chunker.py
+2025-09-17 13:49:13,926 - INFO - Created empty file: tests\test_chunker.py
+2025-09-17 13:49:13,927 - INFO - Created directory: tests for the file: test_embedder.py
+2025-09-17 13:49:13,928 - INFO - Created empty file: tests\test_embedder.py
+2025-09-17 13:49:13,929 - INFO - Created directory: tests for the file: test_vector_store.py
+2025-09-17 13:49:13,929 - INFO - Created empty file: tests\test_vector_store.py
+2025-09-17 13:49:13,930 - INFO - Created directory: tests for the file: test_rag_engine.py
+2025-09-17 13:49:13,930 - INFO - Created empty file: tests\test_rag_engine.py
+2025-09-17 13:49:13,931 - INFO - Created directory: data\samples for the file: .gitkeep
+2025-09-17 13:49:13,931 - INFO - Created empty file: data\samples\.gitkeep
+2025-09-17 13:49:13,932 - INFO - Created directory: docker for the file: Dockerfile
+2025-09-17 13:49:13,932 - INFO - Created empty file: docker\Dockerfile
+2025-09-17 13:49:13,933 - INFO - Created directory: docker for the file: docker-compose.yml
+2025-09-17 13:49:13,933 - INFO - Created empty file: docker\docker-compose.yml
+2025-09-17 13:49:13,934 - INFO - Created empty file: Makefile
+2025-09-17 13:49:13,935 - INFO - File already exists: requirements.txt and is not empty.
+2025-09-17 13:49:13,935 - INFO - File already exists: README.md and is not empty.
+2025-09-17 13:49:13,936 - INFO - File already exists: .gitignore and is not empty.
+2025-09-17 13:49:13,937 - INFO - Created empty file: .env.example
+2025-09-17 13:49:13,938 - INFO - Created directory: config for the file: config.yaml
+2025-09-17 13:49:13,939 - INFO - Created empty file: config\config.yaml
+2025-09-17 13:49:13,940 - INFO - Created empty file: dvc.yaml
+2025-09-17 13:49:13,941 - INFO - Created empty file: params.yaml
+2025-09-17 13:49:13,942 - INFO - Created empty file: schema.yaml
+2025-09-17 13:49:13,943 - INFO - Created empty file: main.py
+2025-09-17 13:49:13,943 - INFO - Created directory: docs for the file: deploy_hf_spaces.md
+2025-09-17 13:49:13,944 - INFO - Created empty file: docs\deploy_hf_spaces.md
+2025-09-17 13:49:13,944 - INFO - Created directory: docs for the file: deploy_aws_ec2.md
+2025-09-17 13:49:13,945 - INFO - Created empty file: docs\deploy_aws_ec2.md
+2025-09-17 13:49:13,945 - INFO - Created directory: docs for the file: deploy_streamlit.md
+2025-09-17 13:49:13,946 - INFO - Created empty file: docs\deploy_streamlit.md
+2025-09-17 13:49:13,947 - INFO - Created directory: docs for the file: security_privacy.md
+2025-09-17 13:49:13,947 - INFO - Created empty file: docs\security_privacy.md
+2025-09-17 13:49:13,948 - INFO - Created directory: research for the file: 01_data_profiling.ipynb
+2025-09-17 13:49:13,949 - INFO - Created empty file: research\01_data_profiling.ipynb
+2025-09-17 13:49:13,950 - INFO - Created directory: research for the file: 02_parser_pipeline_experiments.ipynb
+2025-09-17 13:49:13,951 - INFO - Created empty file: research\02_parser_pipeline_experiments.ipynb
+2025-09-17 13:49:13,952 - INFO - Created directory: research for the file: 03_chunking_strategy_tests.ipynb
+2025-09-17 13:49:13,953 - INFO - Created empty file: research\03_chunking_strategy_tests.ipynb
+2025-09-17 13:49:13,953 - INFO - Created directory: research for the file: 04_embedding_comparison.ipynb
+2025-09-17 13:49:13,954 - INFO - Created empty file: research\04_embedding_comparison.ipynb
+2025-09-17 13:49:13,955 - INFO - Created directory: research for the file: 05_retrieval_eval_and_metrics.ipynb
+2025-09-17 13:49:13,956 - INFO - Created empty file: research\05_retrieval_eval_and_metrics.ipynb
+2025-09-17 13:49:13,956 - INFO - Created directory: research for the file: 06_prompt_and_llm_experiments.ipynb
+2025-09-17 13:49:13,957 - INFO - Created empty file: research\06_prompt_and_llm_experiments.ipynb

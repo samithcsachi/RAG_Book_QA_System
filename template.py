@@ -3,7 +3,17 @@ from pathlib import Path
 import logging 
 
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("logfile.txt"),
+        logging.StreamHandler()
+    ]
+)
 
 
 project_name = 'RAG_Book_QA_System'
@@ -13,15 +23,18 @@ list_of_files = [
     ".github/workflows/ci.yml",
 
     # App Layer—APIs, UI, dashboard
+    "app/__init__.py"
+    "app/main.py",
     "app/api/__init__.py",
     "app/api/routes.py",
     "app/api/schemas.py",
     "app/api/session.py",
     "app/gradio_app.py",
     "app/dashboard.py",
-    "app/logging.py",
+    "app/logger.py",
 
     # Ingestion & Preprocessing
+    "pipeline/__init__.py",
     "pipeline/ingest/__init__.py",
     "pipeline/ingest/parser_base.py",
     "pipeline/ingest/pdf_parser.py",
@@ -82,7 +95,11 @@ list_of_files = [
     "llm/multilingual.py",
 
     # Automated Tests
+    "tests/__init__.py",
     "tests/test_pdf_parser.py",
+    "tests/test_docx_parser.py", 
+    "tests/test_txt_parser.py",
+    "tests/test_html_parser.py",
     "tests/test_chunker.py",
     "tests/test_embedder.py",
     "tests/test_vector_store.py",

@@ -64,7 +64,6 @@ list_of_files = [
     "pipeline/vector_store/__init__.py",
     "pipeline/vector_store/store_base.py",
     "pipeline/vector_store/faiss_store.py",
-    "pipeline/vector_store/weaviate_store.py",
     "pipeline/vector_store/bm25_keyword_store.py",
     "pipeline/vector_store/store_registry.py",
     "pipeline/vector_store/hybrid_retriever.py",
@@ -73,9 +72,7 @@ list_of_files = [
     "pipeline/rag/__init__.py",
     "pipeline/rag/retrieval_engine.py",
     "pipeline/rag/prompt_templates.py",
-    "pipeline/rag/reranker.py",
-    "pipeline/rag/metrics.py",
-    "pipeline/rag/citation.py",
+   
     
     # Monitoring/Feedback
     "pipeline/monitoring/__init__.py",
@@ -85,11 +82,8 @@ list_of_files = [
     # LLM registry/wrappers
     "llm/__init__.py",
     "llm/llm_base.py",
-    "llm/mistral_local.py",
-    "llm/openai_api.py",
-    "llm/lora_adapter.py",
     "llm/model_registry.py",
-    "llm/multilingual.py",
+   
 
     # Automated Tests
     "tests/__init__.py",
@@ -101,6 +95,7 @@ list_of_files = [
     "tests/test_embedder.py",
     "tests/test_vector_store.py",
     "tests/test_rag_engine.py",
+    "tests/test_llm.py",
 
     # Data, config, infra
     "data/samples/.gitkeep",

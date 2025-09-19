@@ -1,0 +1,1 @@
+from .store_registry import get_store

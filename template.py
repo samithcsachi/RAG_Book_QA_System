@@ -58,10 +58,7 @@ list_of_files = [
     "pipeline/embeddings/__init__.py",
     "pipeline/embeddings/embedder_base.py",
     "pipeline/embeddings/sentence_transformer_embed.py",
-    "pipeline/embeddings/cohere_embed.py",
-    "pipeline/embeddings/voyageai_embed.py",
-    "pipeline/embeddings/embedding_registry.py",
-    "pipeline/embeddings/compress.py",
+       
 
     # Vector Store & Hybrid Retrieval
     "pipeline/vector_store/__init__.py",

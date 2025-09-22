@@ -21,18 +21,23 @@ class VectorStoreFAISS(VectorStoreBase):
         self.metadatas.extend(metadatas)
         self.save()
 
-    def search(self, query_embed, k=5, method=None):
+    def search(self, query_embed, k=5, method=None, max_distance=0.8):  
         query = np.array(query_embed).reshape(1, -1).astype('float32')
         D, I = self.index.search(query, k)
         results = []
-        for idx in I[0]:
-            if idx >= 0 and idx < len(self.texts):
+        for score, idx in zip(D[0], I[0]):
+            print(f"Chunk idx: {idx}, L2 distance: {score:.4f}")
+            if idx < 0 or idx >= len(self.texts):
+                continue
+            if score <= max_distance:
                 results.append({
                     "text": self.texts[idx],
                     "embedding": self.embeddings[idx],
-                    "meta": self.metadatas[idx]
+                    "meta": self.metadatas[idx],
+                    "distance": score
                 })
         return results
+
 
     def save(self):
         faiss.write_index(self.index, self.index_path)
@@ -50,3 +55,5 @@ class VectorStoreFAISS(VectorStoreBase):
             self.texts = data["texts"]
             self.embeddings = data["embeddings"]
             self.metadatas = data["metadatas"]
+
+FaissStore = VectorStoreFAISS

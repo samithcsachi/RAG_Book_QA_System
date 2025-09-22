@@ -4,6 +4,9 @@ from pipeline.ingest.pdf_parser import PDFParser
 from pipeline.ingest.docx_parser import DOCXParser
 from pipeline.ingest.txt_parser import TXTParser
 from pipeline.ingest.html_parser import HTMLParser
+from fastapi import Request
+from pipeline.rag.retrieval_engine import answer_question
+from app.logger import logging
 
 
 router = APIRouter()
@@ -31,3 +34,34 @@ async def upload_file(file: UploadFile = File(...)):
 
     text, metadata = parser.extract_text_and_metadata(str(file_path))
     return {"filename": file.filename, "preview": text[:500], "metadata": metadata}
+
+
+@router.post("/ask")
+async def ask_question(request: Request):
+    data = await request.json()
+    question = data.get("question")
+    if not question:
+        return {"error": "No question provided."}
+    # Call your RAG pipeline (update these params as needed!)
+    answer_pack = answer_question(
+        question=question,
+        embed_model="all-MiniLM-L6-v2",
+        store_type="faiss",
+        store_kwargs={"dim": 384},
+        llm_name="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        top_k=3,
+    )
+    logging.info(f"Question answered: '{question}'")
+    return {
+        "answer": answer_pack["answer"],
+        "chunks": answer_pack["chunks"],
+        "context": answer_pack["context"]
+    }
+
+@router.post("/feedback")
+async def feedback(request: Request):
+    data = await request.json()
+    with open("feedback.csv", "a") as f:
+        f.write(f"{data.get('question','')},{data.get('answer','')},{data.get('rating','')}\n")
+    logging.info(f"Feedback received for: '{data.get('question','')}'")
+    return {"success": True}

@@ -28,9 +28,7 @@ list_of_files = [
     "app/api/__init__.py",
     "app/api/routes.py",
     "app/api/schemas.py",
-    "app/api/session.py",
     "app/gradio_app.py",
-    "app/dashboard.py",
     "app/logger.py",
 
     # Ingestion & Preprocessing
@@ -41,19 +39,14 @@ list_of_files = [
     "pipeline/ingest/docx_parser.py",
     "pipeline/ingest/txt_parser.py",
     "pipeline/ingest/html_parser.py",
-    "pipeline/preprocess/__init__.py",
-    "pipeline/preprocess/clean_text.py",
-    "pipeline/preprocess/metadata.py",
-
+    
     # Chunking & Evaluation Data
     "pipeline/chunking/__init__.py",
     "pipeline/chunking/splitter_base.py",
     "pipeline/chunking/fixed_chunker.py",
     "pipeline/chunking/semantic_chunker.py",
     "pipeline/chunking/chunk_benchmark.py",
-    "pipeline/eval_data/__init__.py",
-    "pipeline/eval_data/qa_generator.py",
-
+    
     # Embeddings
     "pipeline/embeddings/__init__.py",
     "pipeline/embeddings/embedder_base.py",
@@ -118,13 +111,7 @@ list_of_files = [
     "docs/deploy_streamlit.md",
     "docs/security_privacy.md",
 
-    # Research/experimentation notebooks
-    "research/01_data_profiling.ipynb",
-    "research/02_parser_pipeline_experiments.ipynb",
-    "research/03_chunking_strategy_tests.ipynb",
-    "research/04_embedding_comparison.ipynb",
-    "research/05_retrieval_eval_and_metrics.ipynb",
-    "research/06_prompt_and_llm_experiments.ipynb"
+   
 ]
 
 

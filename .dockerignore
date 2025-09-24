@@ -1,0 +1,46 @@
+# Ignore Python cache files/folders
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore venv and local packages
+.venv/
+env/
+venv/
+
+# Ignore git, DVC, and other VCS/experiment files
+.git/
+.dvc/
+.dvcignore
+
+# Ignore massive raw/cached data
+data/*
+#!data/faiss.index
+#!data/faiss.meta.pkl
+
+# Ignore model artifacts if already available in Hugging Face or downloaded during runtime
+*.joblib
+*.pt
+*.onnx
+*.h5
+
+# Ignore logs/temp files
+logfile.txt
+*.log
+*.tmp
+
+# Ignore test notebooks and folders
+research/
+tests/
+*.ipynb
+
+# Ignore downloads and cache folders
+downloads/
+.cache/
+
+# OS temp files (optional)
+.DS_Store
+Thumbs.db
+
+# Docker Compose overrides (optional)
+docker-compose.override.yml

@@ -27,9 +27,8 @@ list_of_files = [
     "app/main.py",
     "app/api/__init__.py",
     "app/api/routes.py",
-    "app/api/schemas.py",
     "app/gradio_app.py",
-    "app/logger.py",
+ 
 
     # Ingestion & Preprocessing
     "pipeline/__init__.py",
@@ -67,11 +66,6 @@ list_of_files = [
     "pipeline/rag/prompt_templates.py",
    
     
-    # Monitoring/Feedback
-    "pipeline/monitoring/__init__.py",
-    "pipeline/monitoring/drift_detection.py",
-    "pipeline/monitoring/feedback.py",
-
     # LLM registry/wrappers
     "llm/__init__.py",
     "llm/llm_base.py",
@@ -93,23 +87,12 @@ list_of_files = [
     # Data, config, infra
     "data/samples/.gitkeep",
     "docker/Dockerfile",
-    "docker/docker-compose.yml",
-    "Makefile",
     "requirements.txt",
     "README.md",
     ".gitignore",
-    ".env.example",
-    "config/config.yaml",
-    "dvc.yaml",
-    "params.yaml",
-    "schema.yaml",
-    "main.py",
+    
 
-    # Documentation for deployment & privacy
-    "docs/deploy_hf_spaces.md",
-    "docs/deploy_aws_ec2.md",
-    "docs/deploy_streamlit.md",
-    "docs/security_privacy.md",
+   
 
    
 ]

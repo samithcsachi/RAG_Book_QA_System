@@ -6,8 +6,7 @@ from pipeline.ingest.txt_parser import TXTParser
 from pipeline.ingest.html_parser import HTMLParser
 from fastapi import Request
 from pipeline.rag.retrieval_engine import answer_question
-from app.logger import logging
-
+import logging
 
 router = APIRouter()
 
@@ -45,7 +44,7 @@ async def ask_question(request: Request):
     question = data.get("question")
     if not question:
         return {"error": "No question provided."}
-    # Call your RAG pipeline (update these params as needed!)
+
     answer_pack = answer_question(
         question=question,
         embed_model="all-MiniLM-L6-v2",

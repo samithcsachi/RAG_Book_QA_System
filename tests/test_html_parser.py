@@ -1,6 +1,7 @@
 import os
 from pipeline.ingest.html_parser import HTMLParser
 
+
 def test_html_extraction():
     test_html = "data/samples/sample.html"
     assert os.path.exists(test_html), "Test HTML not found."

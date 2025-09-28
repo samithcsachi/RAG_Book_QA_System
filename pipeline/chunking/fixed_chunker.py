@@ -1,6 +1,7 @@
 from typing import List, Dict
 from .splitter_base import SplitterBase
 
+
 class FixedChunker(SplitterBase):
     def chunk(self, text: str, chunk_size: int, overlap: int) -> List[Dict]:
         chunks = []

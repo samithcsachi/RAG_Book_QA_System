@@ -11,6 +11,7 @@ from app.logger import logging
 
 router = APIRouter()
 
+
 @router.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
     save_dir = Path("data/raw/")
@@ -33,7 +34,9 @@ async def upload_file(file: UploadFile = File(...)):
         return {"error": "Unsupported file type!"}
 
     text, metadata = parser.extract_text_and_metadata(str(file_path))
-    return {"filename": file.filename, "preview": text[:500], "metadata": metadata}
+    return {"filename": file.filename,
+            "preview": text[:500],
+            "metadata": metadata}
 
 
 @router.post("/ask")
@@ -58,10 +61,18 @@ async def ask_question(request: Request):
         "context": answer_pack["context"]
     }
 
+
 @router.post("/feedback")
 async def feedback(request: Request):
     data = await request.json()
     with open("feedback.csv", "a") as f:
-        f.write(f"{data.get('question','')},{data.get('answer','')},{data.get('rating','')}\n")
-    logging.info(f"Feedback received for: '{data.get('question','')}'")
+        f.write(
+            f"{
+                data.get(
+                    'question', '')},{
+                data.get(
+                    'answer', '')},{
+                        data.get(
+                            'rating', '')}\n")
+    logging.info(f"Feedback received for: '{data.get('question', '')}'")
     return {"success": True}

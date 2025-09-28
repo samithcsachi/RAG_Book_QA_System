@@ -15,8 +15,10 @@ from pipeline.rag.retrieval_engine import answer_question
 FAISS_INDEX_PATH = "data/faiss.index"
 EMBED_DIM = 384
 
+
 def sanitize_filename(filename):
     return re.sub(r'[^a-zA-Z0-9_.-]', '_', filename)
+
 
 def process_and_qa(file, question):
     try:
@@ -54,20 +56,19 @@ def process_and_qa(file, question):
         else:
             return "Unsupported filetype.", "", ""
 
-        
         try:
             text, metadata = parser.extract_text_and_metadata(str(file_path))
             chunks = FixedChunker().chunk(text, chunk_size=512, overlap=64)
-            #print(f"Chunks parsed: {len(chunks)}")
+            # print(f"Chunks parsed: {len(chunks)}")
             embeddings = embed_chunks(chunks, model_name="all-MiniLM-L6-v2")
-            #print(f"Embeddings computed: {len(embeddings)}")
+            # print(f"Embeddings computed: {len(embeddings)}")
             metadatas = [{} for _ in chunks]
             store = FaissStore(dim=EMBED_DIM, index_path=FAISS_INDEX_PATH)
             if os.path.exists(FAISS_INDEX_PATH):
                 store.load()
             store.add_documents(chunks, embeddings, metadatas)
             store.save()
-            #print("Index updated.")
+            # print("Index updated.")
         except Exception as e:
             return f"Failed to extract: {repr(e)}", "", ""
 
@@ -81,13 +82,15 @@ def process_and_qa(file, question):
         )
         answer = qa_result["answer"]
         matched_chunks = qa_result.get("chunks", [])
-        #print("QA chunks:", matched_chunks)
-        context = "\n\n---\n\n".join([c["text"] for c in matched_chunks]) if matched_chunks else "No supporting context found."
+        # print("QA chunks:", matched_chunks)
+        context = "\n\n---\n\n".join([c["text"] for c in matched_chunks]
+                                     ) if matched_chunks else "No supporting context found."
         return f"Preview (first 500 chars):\n{text[:500]}", answer, context
 
     except Exception as e:
         # print("GRADIO ERROR:", str(e))
         return f"Error: {e}", "Error", "Error"
+
 
 iface = gr.Interface(
     fn=process_and_qa,

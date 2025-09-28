@@ -1,6 +1,7 @@
 import os
 from pipeline.ingest.txt_parser import TXTParser
 
+
 def test_txt_extraction():
     test_txt = "data/samples/sample.txt"
     assert os.path.exists(test_txt), "Test TXT not found."

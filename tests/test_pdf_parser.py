@@ -1,8 +1,9 @@
+import os
+from pipeline.ingest.pdf_parser import PDFParser
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from pipeline.ingest.pdf_parser import PDFParser
-import os
+
 
 def test_pdf_extraction():
     test_pdf = "data/samples/sample.pdf"

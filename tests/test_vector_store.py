@@ -1,6 +1,7 @@
 import numpy as np
 from pipeline.vector_store import get_store
 
+
 def test_faiss_add_search():
     dim = 4
     # Fake data: 3 chunks, simple embeddings
@@ -22,6 +23,7 @@ def test_faiss_add_search():
     assert len(results) == 2
     assert results[0]["meta"]["id"] == 2
 
+
 def test_bm25_add_search():
     chunks = [
         {"text": "dog barks loud", "meta": {"id": 1}},
@@ -33,6 +35,7 @@ def test_bm25_add_search():
     results = store.search("cat", k=2)
     assert len(results) == 2
     assert results[0]["meta"]["id"] == 2
+
 
 def test_hybrid_add_search():
     dim = 4

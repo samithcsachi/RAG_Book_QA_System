@@ -1,6 +1,7 @@
 from rank_bm25 import BM25Okapi
 from .store_base import VectorStoreBase
 
+
 class BM25KeywordStore(VectorStoreBase):
     def __init__(self):
         self.corpus = []

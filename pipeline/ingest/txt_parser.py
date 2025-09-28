@@ -1,6 +1,7 @@
 from pathlib import Path
 from .parser_base import ParserBase
-from typing import Tuple, Dict 
+from typing import Tuple, Dict
+
 
 class TXTParser(ParserBase):
     def extract_text_and_metadata(self, filepath: str) -> Tuple[str, Dict]:
@@ -12,4 +13,3 @@ class TXTParser(ParserBase):
             "length": len(text)
         }
         return text, metadata
-    

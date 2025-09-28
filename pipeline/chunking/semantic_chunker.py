@@ -8,7 +8,10 @@ HEADING_PATTERNS = [
     r"^(\d+\.){1,3}\s+\w+",
 ]
 PAGE_PATTERN = re.compile(r"\b[Pp]age\s+(\d+)\b|\f")
-FIGURE_PATTERN = re.compile(r"^(Figure|Table|Image)[ .:]+\d+[ .:]+", re.IGNORECASE)
+FIGURE_PATTERN = re.compile(
+    r"^(Figure|Table|Image)[ .:]+\d+[ .:]+",
+    re.IGNORECASE)
+
 
 def find_headings(lines):
     headings = []
@@ -19,8 +22,9 @@ def find_headings(lines):
                 break
     return headings
 
+
 def split_by_size(text, chunk_size, overlap):
-    
+
     subsections = []
     i = 0
     while i < len(text):
@@ -32,6 +36,7 @@ def split_by_size(text, chunk_size, overlap):
             break
         i += chunk_size - overlap
     return subsections
+
 
 class SemanticChunker(SplitterBase):
     def chunk(self, text: str, chunk_size: int, overlap: int) -> List[Dict]:
@@ -50,12 +55,12 @@ class SemanticChunker(SplitterBase):
         i = 0
         while i < len(lines):
             line = lines[i]
-           
+
             if any(re.match(pat, line.strip()) for pat in HEADING_PATTERNS):
                 cur_section = line.strip()
                 i += 1
                 continue
-           
+
             if FIGURE_PATTERN.match(line):
                 chunks.append({
                     "text": line.strip(),
@@ -69,35 +74,38 @@ class SemanticChunker(SplitterBase):
                 })
                 i += 1
                 continue
-          
+
             if PAGE_PATTERN.search(line):
                 i += 1
                 continue
-           
+
             para_lines = []
             para_start = i
-            while (i < len(lines) and lines[i].strip() and
-                   not any(re.match(pat, lines[i].strip()) for pat in HEADING_PATTERNS) and
-                   not FIGURE_PATTERN.match(lines[i]) and
-                   not PAGE_PATTERN.search(lines[i])):
+            while (
+                i < len(lines) and lines[i].strip() and not any(
+                    re.match(
+                        pat,
+                        lines[i].strip()) for pat in HEADING_PATTERNS) and not FIGURE_PATTERN.match(
+                    lines[i]) and not PAGE_PATTERN.search(
+                    lines[i])):
                 para_lines.append(lines[i])
                 i += 1
             para_text = "\n".join(para_lines).strip()
-            
+
             if para_text:
                 subchunks = split_by_size(para_text, chunk_size, overlap)
                 for substart, subend, chunk_str in subchunks:
                     chunks.append({
                         "text": chunk_str,
-                        "start": para_start,  
-                        "end": i,            
+                        "start": para_start,
+                        "end": i,
                         "meta": {
                             "section": cur_section or "NO_SECTION",
                             "page": line_pages.get(para_start, 1),
                             "source": "semantic"
                         }
                     })
-           
+
             while i < len(lines) and not lines[i].strip():
                 i += 1
         return chunks

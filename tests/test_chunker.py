@@ -11,12 +11,12 @@ def test_fixed_chunker():
     assert chunks[1]["start"] == 40  # checks overlap
     assert "meta" in chunks[0]
 
+
 def test_semantic_chunker():
     text = "Intro para.\n\nSecond para is here.\n\nThird para."
     chunks = chunk_text(text, chunk_size=25, overlap=0, method="semantic")
     assert all(len(c["text"]) <= 25 for c in chunks)
     assert all("meta" in c for c in chunks)
-
 
 
 def test_semantic_chunker_with_sections():
@@ -30,7 +30,11 @@ def test_semantic_chunker_with_sections():
     )
     chunk_size = 100
     overlap = 20
-    chunks = chunk_text(text, chunk_size=chunk_size, overlap=overlap, method="semantic")
+    chunks = chunk_text(
+        text,
+        chunk_size=chunk_size,
+        overlap=overlap,
+        method="semantic")
     prev_section = None
     for chunk in chunks:
         # Each chunk should have a section label
@@ -38,7 +42,8 @@ def test_semantic_chunker_with_sections():
         # Each chunk's section label should actually exist in the input
         assert chunk["meta"]["section"] in text
         # Print output for manual verification (optional)
-        print(f'Section: {chunk["meta"]["section"]} | Text: {chunk["text"][:40]}...')
+        print(
+            f'Section: {chunk["meta"]["section"]} | Text: {chunk["text"][:40]}...')
         prev_section = chunk["meta"]["section"]
 
     print(f"Generated {len(chunks)} chunks.")

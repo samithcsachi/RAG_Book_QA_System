@@ -3,6 +3,7 @@ import numpy as np
 import pickle
 from .store_base import VectorStoreBase
 
+
 class VectorStoreFAISS(VectorStoreBase):
     def __init__(self, dim, index_path=None, metadata_path=None):
         self.dim = dim
@@ -21,7 +22,7 @@ class VectorStoreFAISS(VectorStoreBase):
         self.metadatas.extend(metadatas)
         self.save()
 
-    def search(self, query_embed, k=5, method=None, max_distance=0.8):  
+    def search(self, query_embed, k=5, method=None, max_distance=0.8):
         query = np.array(query_embed).reshape(1, -1).astype('float32')
         D, I = self.index.search(query, k)
         results = []
@@ -37,7 +38,6 @@ class VectorStoreFAISS(VectorStoreBase):
                     "distance": score
                 })
         return results
-
 
     def save(self):
         faiss.write_index(self.index, self.index_path)
@@ -55,5 +55,6 @@ class VectorStoreFAISS(VectorStoreBase):
             self.texts = data["texts"]
             self.embeddings = data["embeddings"]
             self.metadatas = data["metadatas"]
+
 
 FaissStore = VectorStoreFAISS

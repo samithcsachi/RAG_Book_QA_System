@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 from pathlib import Path
 from .parser_base import ParserBase
-from typing import Tuple, Dict 
+from typing import Tuple, Dict
+
 
 class HTMLParser(ParserBase):
     def extract_text_and_metadata(self, filepath: str) -> Tuple[str, Dict]:

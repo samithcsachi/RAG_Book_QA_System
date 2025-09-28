@@ -4,6 +4,7 @@ EMBEDDING_BACKENDS = {
     "sentence_transformers": sentence_transformer_embed
 }
 
+
 def embed_chunks(chunks, backend: str, model_name: str, version: str = None):
     mod = EMBEDDING_BACKENDS.get(backend)
     if not mod:

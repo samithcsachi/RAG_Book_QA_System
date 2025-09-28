@@ -1,8 +1,9 @@
 from pipeline.rag.retrieval_engine import answer_question
 from pipeline.rag.prompt_templates import DEFAULT_PROMPT_TEMPLATE
 
+
 def test_rag_pipeline_e2e():
-    
+
     response = answer_question(
         question="What is artificial intelligence?",
         embed_model="all-MiniLM-L6-v2",
